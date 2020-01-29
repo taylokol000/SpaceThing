@@ -4,6 +4,7 @@ public class Bullet {
 
     int x, y, diameter = 10;
     int speed, dx, dy = 10;
+    boolean remove;
 
     public Bullet(Player player){
 
@@ -15,6 +16,11 @@ public class Bullet {
         y-=dy;
     }
 
+    public Rectangle getBounds(){
+        return new Rectangle(x, y, diameter, diameter);
+    }
+
+
     public void paint(Graphics g){
         g.setColor(Color.white);
         g.fillOval(x, y, diameter, diameter);
@@ -23,4 +29,12 @@ public class Bullet {
     public int getY(){
         return y;
     }
+
+    public void setRemove(){
+        remove = true;
+    }
+    public boolean getRemove(){
+        return remove;
+    }
+
 }
