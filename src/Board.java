@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Board extends JPanel implements ActionListener {
 
     Player player;
-    Enemy enemy;
     ArrayList<Bullet> bullets = new ArrayList<Bullet>();
     Enemy[][] enemies = new Enemy[5][10];
     Timer timer;
